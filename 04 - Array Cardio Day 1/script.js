@@ -54,14 +54,14 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    let peoplenew = people.sort((first, last) => {
-      let [firstA, lastA] = first.split(', ');
-      let [firstB, lastB] = last.split(', ');
+    // let peoplenew = people.sort((first, last) => {
+    //   let [firstA, lastA] = first.split(', ');
+    //   let [firstB, lastB] = last.split(', ');
 
-      return lastA > lastB ? 1 : -1;
-    })
+    //   return lastA > lastB ? 1 : -1;
+    // })
 
-    console.log(peoplenew);
+    // console.log(peoplenew);
     
     // 8. Reduce Exercise
     // Sum up the instances of each of these
