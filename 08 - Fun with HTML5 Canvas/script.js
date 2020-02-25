@@ -7,7 +7,7 @@ canvas.width = window.innerWidth;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 100;
+ctx.lineWidth = 20;
 // ctx.globalCompositeOperation = 'subtrack';
 
 let isDrawing = false,
@@ -21,10 +21,8 @@ function draw (event) {
   if (!isDrawing) return; //fn works only when mouse is down
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();//begin draw
-  //start from
-  ctx.moveTo(lastX, lastY);
-  //go to
-  ctx.lineTo(event.offsetX, event.offsetY);
+  ctx.moveTo(lastX, lastY); //start from
+  ctx.lineTo(event.offsetX, event.offsetY); //go to
   ctx.stroke();
   [lastX, lastY] = [event.offsetX, event.offsetY];
 
