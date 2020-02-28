@@ -10,7 +10,9 @@ body {
   margin: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -24,7 +26,13 @@ body {
   transform: scale(0.98);
   transition: transform 0.5s;
 }
-
+.fixed-nav .site-wrap {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
 header {
   text-align: center;
   height: 50vh;
@@ -38,7 +46,7 @@ header {
 h1 {
   color: white;
   font-size: 7vw;
-  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -50,9 +58,14 @@ nav {
   z-index: 1;
 }
 
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+}
+
 nav ul {
   margin: 0;
-  padding:0;
+  padding: 0;
   list-style: none;
   display: flex;
 }
@@ -69,9 +82,17 @@ li.logo {
   max-width: 0;
   overflow: hidden;
   background: white;
-  transition: all .5s;
+  transition: all .5s ease-out;
   font-weight: 600;
   font-size: 30px;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
 }
 
 li.logo a {
